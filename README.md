@@ -3,6 +3,10 @@
 This is a personal (private) repository for storing & maintaining
 my personal documentation and tutorials.
 
+__NOTE__  
+- The name of folders should be `capitalize`
+- The name of file should be `lowercase`
+
 # Author
 
 Hi, i am Praveen Perumal (@solvedbiscuit71) a self-taught programmer & developer.
