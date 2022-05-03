@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography</title>
+
+  <style>
+/* 
+font-family:
+  -> setting in the html makes it global font family
+  -> provide a fallback font family with comma (,)
+  */
+html {
+  font-family: Agave, monospace;
+  font-size: 10px; /* set the 1rem = 10px */
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+header ul {
+  font-size: 1.5rem;
+}
+
+header li > span {
+  font-family: Courier, monospace;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+.target-space {
+  font-size: 1.5rem;
+
+  line-height: 2;
+  letter-spacing: 2.5px;
+  word-spacing: 15px;
+}
+
+.target-text {
+  font-size: 1.5rem;
+
+  text-align: center;
+  text-indent: 2.5em;
+  text-transform: capitalize;
+}
+
+.target-text > span {
+  text-transform: uppercase;
+  text-decoration: solid underline red;
+}
+
+.target-white {
+  font-size: 1.5rem;
+
+  white-space: normal;
+  /* white-space: nowrap; */
+
+  /* white-space: pre; */
+  /* white-space: pre-wrap; */
+  /* white-space: pre-line; */
+}
+
+blockquote {
+  font-size: medium;
+  white-space: pre;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Typography</h1>
+    <p>
+      There are multiple property when it comes to typography.
+    </p>
+    <ul>
+      <li><span>font-</span> property</li>
+      <li><span>text-</span> property</li>
+      <li><span>-spacing</span> property</li>
+    </ul>
+  </header>
+
+  <main>
+    <section>
+      <h2>Example for Spacing</h2>
+      <p class="target-space">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum qui maxime porro consequuntur fuga in nesciunt. Ullam, autem ipsum. Rerum voluptas ducimus labore? Accusantium, culpa error! Eligendi totam est id!
+      </p>
+    </section>
+
+    <section>
+      <h2>Example for Text</h2>
+      <p class="target-text">
+        Lorem <span>ipsum dolor,</span> sit amet consectetur adipisicing elit. Voluptates, iusto tenetur debitis modi ducimus consequuntur suscipit eius in laudantium omnis ex quae accusantium deleniti vero distinctio? Quos minima libero distinctio.
+      </p>
+    </section>
+
+    <section>
+      <h2>Example for white-space</h2>
+      <p class="target-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Facere, suscipit officiis vero sequi ducimus in fugiat recusandae minus aperiam a dolorum aliquam perferendis placeat rem porro similique vitae. Deserunt, rerum!
+      </p>
+    </section>
+
+    <section>
+      <h2>Another Example of white-space</h2>
+      <blockquote>
+This is a blockquote.
+  Which has `white-space: pre;` set like,
+
+blockquote {
+  white-space: pre;
+}
+      </blockquote>
+
+    </section>
+  </main>
+</body>
+</html>

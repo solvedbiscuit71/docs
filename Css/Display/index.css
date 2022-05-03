@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Agave, monospace;
+}
+
+.card {
+  width: 240px;
+  min-height: 260px;
+
+  margin-bottom: 1em;
+  padding: 10px;
+
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+span {
+  /* use to set the background color */
+  background-color: rgb(243, 207, 219);
+
+  padding: 2.5px 5px;
+  margin: 10px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  width: 50px;
+  height: 50px;
+}

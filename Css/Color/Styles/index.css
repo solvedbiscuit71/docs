@@ -1,0 +1,32 @@
+.ex1 h2 {
+  background-color: hsl(20, 60%, 65%);
+  color: white;
+}
+
+.ex1 p {
+  color: hsl(20, 60%, 65%);
+  background-color: white;
+}
+
+.ex2 h2 {
+  /* linear-gradient(), radial-gradient() are gradient and for images use url() */
+  background-image: linear-gradient(to right,
+      hsl(0, 100%, 50%),
+      hsl(44, 100%, 50%));
+  color: white;
+}
+
+.ex2 p {
+  background-image: url(../Images/bg-image.jpg);
+
+  /* background-repeat: repeat; */
+  /* background-repeat: no-repeat; */
+
+  /* background-size: auto; */
+  /* background-size: contain; */
+  /* background-size: cover; */
+
+  /* background-position: bottom 2em left */
+
+  color: white;
+}

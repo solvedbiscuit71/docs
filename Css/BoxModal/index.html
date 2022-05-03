@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Modal</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main>
+    <h1>Box modal</h1>
+    <p>
+      There are two types of box modal,
+    <ol>
+      <li> <b>content-box</b> (width & height is only content area) </li>
+      <li> <b>border-box</b> (width & height is content area + padding + border) </li>
+    </ol>
+    </p>
+
+    <section>
+      <div class="box content">
+        <h2>content-box</h2>
+        <p>width: 250px
+          height: 250px
+
+          margin: 10px
+          padding: 10px
+          border-width: 5px
+          border-radius: 10px
+
+          outline-width: 1px
+          outline-offset: 2.5px
+        </p>
+      </div>
+      <div class="box border">
+        <h2>border-box</h2>
+        <p>width: 250px
+          height: 250px
+
+          margin: 10px
+          padding: 10px
+          border-width: 5px
+          border-radius: 10px
+
+          outline-width: 1px
+          outline-offset: 2.5px
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <b>Note:</b>
+    Margin between the two box collapse into one.
+    i.e
+    10px + 10px didn't add up to 20px
+    instead collapse into 10px (largest one)
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position</title>
+
+  <link rel="stylesheet" href="Styles/index.css">
+  <link rel="stylesheet" href="Styles/root.css">
+</head>
+
+<body>
+  <header>
+    <h1>Position</h1>
+    <p> There mainly three type of positioning values </p>
+    <ul style="padding-left: 15px;">
+      <li>static (default)</li>
+      <li>relative</li>
+      <li>absolute</li>
+    </ul>
+
+    <h3>Positioned Element</h3>
+    <p>
+      An element is said to be <b>positioned element</b> if it's position property
+      is not set to <b>static</b>.
+    </p>
+    <ul>
+      <li>element come on-top of the layout. (z-index increased)</li>
+      <li>it's position in screen remains unchanged until set manually.</li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="card card-1">
+      <h2>Card 1</h2>
+      <p>
+        Paragraph of the card...
+      </p>
+    </div>
+    <div class="card card-2">
+      <h2>Card 2</h2>
+      <p>
+        Paragraph of the card...
+      </p>
+    </div>
+    <div class="card card-3">
+      <h2>Card 3</h2>
+      <p>
+        Paragraph of the card...
+      </p>
+    </div>
+    <div class="card card-4">
+      <h2>Card 4</h2>
+      <p>
+        Paragraph of the card...
+      </p>
+    </div>
+  </main>
+
+  <footer style="margin-top: 10px;">
+    <p>
+      Here, the above <span class="badge">main</span> tag is a <b>positioned element</b>.
+    </p>
+    <p>
+      So, for any descendant node this will be the nearest positioned ancestor node. Assuming the node between
+      <span class="badge">main</span> and descendant are not positioned element.
+    </p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+
+  <link rel="stylesheet" href="Styles/index.css">
+  <link rel="stylesheet" href="Styles/root.css">
+</head>
+
+<body>
+  <header>
+    <h1>Grid</h1>
+    <p>
+      It is used to create 2D layout by defining the rows & columns.
+    <p class="pre">
+      .parent {
+      display: grid;
+      }
+    </p>
+    </p>
+    <p>
+      This makes the <span class="badge">.parent</span> a grid container and it's direct children a grid items.
+    </p>
+
+    <section style="display: flex; justify-content: center; gap: 2em;">
+      <div style="background-color: antiquewhite;">
+        <h3 style="margin: .5em;">layout defination property</h3>
+        <p style="margin: 0; text-align: center;">[container]</p>
+        <ul>
+          <li>grid-template-rows</li>
+          <li>grid-template-columns</li>
+          <li>grid-template-areas</li>
+        </ul>
+      </div>
+      <div style="background-color: antiquewhite;">
+        <h3 style="margin: .5em;">layout defination property</h3>
+        <p style="margin: 0; text-align: center;">[item]</p>
+        <ul>
+          <li>grid-row</li>
+          <li>grid-column</li>
+          <li>grid-area</li>
+        </ul>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section>
+      <h2>Template Row & Column</h2>
+      <p class="pre">
+        <b>Note:</b>
+        i. by default, on setting <span class="badge">display: grid;</span> it will create 1 column
+        with as many rows required.
+        ii. also, margin collapsing will not longer work!
+      </p>
+      <div class="container" id='c1'>
+        <div class="item" id="i11">Item 1</div>
+        <div class="item" id="i12">Item 2</div>
+        <div class="item" id="i13">Item 3</div>
+        <div class="item" id="i14">Item 4</div>
+        <div class="item" id="i15">Item 5</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Template Area</h2>
+      <div class="container" id="c2">
+        <div class="item" id="i21">Item 1</div>
+        <div class="item" id="i22">Item 2</div>
+        <div class="item" id="i23">Item 3</div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

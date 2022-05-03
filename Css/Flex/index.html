@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+
+  <link rel="stylesheet" href="Styles/index.css">
+  <link rel="stylesheet" href="Styles/root.css">
+</head>
+
+<body>
+  <header>
+    <h1>Flex</h1>
+    <p>it's a 1D layout for creating rows and columns</p>
+    <div class="code">
+      .parent {
+      display: flex;
+      }
+    </div>
+    <p>
+      This will make the <span class="tag">.parent</span> a <b>flex container</b>
+      and it's direct child a <b>flex items</b>
+    </p>
+    <p>
+      <b>Default:</b>
+    <ul>
+      <li>direction will row [can be changed by <b>flex-direction</b> on parent]</li>
+      <li>flex-basis will look for <b>width</b> as it's set to auto</li>
+      <li>flex-shrink will be <b>1</b> and flex-grow will be <b>0</b></li>
+    </ul>
+    </p>
+  </header>
+  <main>
+    <section>
+      <h2>flex-wrap & gap</h2>
+      <div class="flex" id="ex1">
+        <div class="item w3"></div>
+        <div class="item w2"></div>
+        <div class="item w1"></div>
+        <div class="item w3"></div>
+      </div>
+    </section>
+    <section>
+      <h2>flex-grow & flex-shrink</h2>
+      <div class="flex" id="ex2">
+        <div class="item w3"></div>
+        <div class="item w2"></div>
+        <div class="item w1"></div>
+        <div class="item w3"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>align-items & justify-content</h2>
+      <div class="flex" style="min-height: 15em;" id="ex3">
+        <div class="item w1"></div>
+        <div class="item w1"></div>
+        <div class="item w1"></div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

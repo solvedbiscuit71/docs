@@ -1,0 +1,32 @@
+.item {
+  margin: 1em 0;
+}
+
+#c1 {
+  /* gap: 1em; */
+
+  grid-template-columns: 1fr 2fr 1fr;
+  /* grid-template-rows: 90px 120px; */
+
+  /*
+    ?-items: use to align grid item within grid item's area.
+    ?-content: use to align grid area within content area of grid container.
+  */
+}
+
+#c2 {
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    'item2 item1'
+    'item2 item3';
+}
+
+#i21 {
+  grid-area: item1;
+}
+#i22 {
+  grid-area: item2;
+}
+#i23 {
+  grid-area: item3;
+}

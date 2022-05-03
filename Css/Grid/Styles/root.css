@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Agave, monospace;
+  font-size: 16px;
+
+  --fn-sm: .75rem;
+  --fn-md: .875rem;
+  --fn-base: 1rem;
+  --fn-xl: 1.5rem;
+  --fn-2xl: 2rem;
+  --fn-3xl: 2.5rem;
+}
+
+h1 {
+  font-size: var(--fn-3xl);
+  margin: .5em 0;
+}
+
+h2 {
+  font-size: var(--fn-xl);
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: var(--fn-base);
+}
+
+.badge {
+  padding: 2.5px 5px;
+  background-color: blanchedalmond;
+  border-radius: 5px;
+}
+
+.pre {
+  white-space: pre;
+  background-color: hsl(0, 0%, 92%);
+
+  padding: 0 1.5em;
+  position: relative;
+}
+
+.pre::before {
+  content: "";
+
+  width: .5em;
+  height: 100%;
+  background-color: hsl(0, 0%, 60%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 20em;
+
+  background-color: antiquewhite;
+  padding: 1em;
+
+  display: grid;
+}
+
+.item {
+  width: 75px;
+  min-height: 75px;
+
+  position: relative;
+  color: hsl(0, 0%, 20%);
+
+  border: .1em solid black;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

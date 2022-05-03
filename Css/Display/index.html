@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header style="margin-bottom: 32px;">
+    <h1>Display Property</h1>
+    <p>There are mainly three types of display element</p>
+    <ul style="padding-left: 15px;">
+      <li><b>inline</b><small> - padding,border,margin(inline)</small></li>
+      <li><b>block</b><small> - padding,border,margin(both),width,height</small></li>
+      <li><b>inline-block</b><small> - padding,border,margin(both),width,height</small></li>
+    </ul>
+
+    <p>
+      There major difference between a <b>inline</b> and <b>inline-block</b> are
+    <ul style="padding-left: 15px;">
+      <li>
+        <b>inline-block</b> support width and height whereas <b>inline</b>
+        doesn't support.
+      </li>
+      <li>
+        <b>inline-block</b> support marging in both axis whereas <b>inline</b>
+        support only in the inline axis.
+      </li>
+    </ul>
+    </p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>inline</h2>
+      <p>
+        This paragraph has a <span><b>span</b></span> which is a inline element.
+      </p>
+    </div>
+    <div class="card">
+      <h2>block</h2>
+      <p>
+        This paragraph has a <span style="display: block;">span</span> which is a block element.
+      </p>
+    </div>
+    <div class="card">
+      <h2>inline block (border-box)</h2>
+      <p>
+        This paragraph has a <span style="display: inline-block;">span</span> which is a inline-block element.
+      </p>
+    </div>
+    <div class="card">
+      <h2>inline block (content-box)</h2>
+      <p>
+        This paragraph has a <span style="display: inline-block; box-sizing: content-box;">span</span> which is a
+        inline-block element.
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/*
+Pseudo Classes:
+:hover -> on hover over an element
+:active -> mousedown over an element
+:focus -> works in input field which is been current focused
+*/
+.btn {
+  padding: .5em .75em;
+
+  font-family: Agave, monospace;
+  font-size: 1rem;
+
+  background-color: rgb(255, 228, 196);
+  border: 1px solid transparent;
+  border-radius: .5em;
+}
+
+.btn--hover:hover {
+  cursor: pointer;
+
+  background-color: rgb(252, 215, 169);
+  border: 1px solid black;
+}
+
+.btn--active:active {
+  cursor: progress;
+
+  background-color: rgb(252, 215, 169);
+  border: 1px dashed black;
+}
+
+input {
+  min-height: 2.5em;
+  padding: .5em .5em;
+  font-size: 1.125rem;
+
+  color: hsl(0, 0%, 25%);
+  /* To change the cursor color in a input elment use 'caret-color' */
+  caret-color: coral;
+
+  border: 2px solid hsl(0, 0%, 25%);
+  border-radius: 3.75px;
+}
+
+input:hover {
+  cursor: text;
+  background-color: hsl(33, 80%, 95%);
+}
+
+input:focus {
+  outline: 2px dashed coral;
+  outline-offset: 2.5px;
+}
+
+/*
+Pseudo Element
+::before
+::after
+*/
+
+.container {
+  background-color: antiquewhite;
+  min-height: 10em;
+
+  padding: 1em;
+  position: relative;
+}
+
+.tip {
+  width: 50px;
+  min-height: 50px;
+
+  /* border: 25px solid white; */
+  /* border-right: 25px solid coral; */
+
+  position: absolute;
+  top: 2em;
+  left: calc(1em + 150px + 2em);
+}
+
+.box {
+  width: 150px;
+  min-height: 75px;
+
+  background-color: white;
+  border-radius: .5em;
+  padding: 1em;
+
+  position: relative;
+}
+
+.box::after {
+  content: '';
+
+  width: 50px;
+  min-height: 50px;
+
+  border: 25px solid transparent;
+  border-right: 25px solid white;
+
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+}

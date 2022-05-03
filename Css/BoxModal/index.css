@@ -1,0 +1,39 @@
+html {
+  font-family: Agave, monospace;
+  font-size: 15px;
+}
+
+.box {
+  width: 250px;
+  min-height: 250px;
+
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 10px;
+  margin: 10px;
+
+  outline: 1px dashed lightcoral;
+  outline-offset: 2.5px;
+
+  /* typography property */
+  font-size: .8rem;
+}
+
+.box h2 {
+  text-decoration: solid underline black;
+}
+.box p {
+  white-space: pre-line;
+}
+
+.content {
+  box-sizing: content-box;
+}
+
+.border {
+  box-sizing: border-box;
+}
+
+footer {
+  white-space: pre;
+}

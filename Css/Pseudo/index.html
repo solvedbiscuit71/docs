@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo</title>
+
+  <link rel="stylesheet" href="Styles/index.css">
+  <link rel="stylesheet" href="Styles/root.css">
+</head>
+
+<body>
+  <header>
+    <h1>Pseudo Element & Classes</h1>
+    <p>
+      Pseudo Element are of two types
+    <ol>
+      <li>::before</li>
+      <li>::after</li>
+    </ol>
+    <br>
+
+    Pseudo Class are various states of a element like,
+    <ul>
+      <li>:hover</li>
+      <li>:focus</li>
+      <li>:active</li>
+    </ul>
+    <b>Note:</b> <span class="tag">content: '';</span> property should be set on pseudo element.
+
+    <hr>
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pseudo Classes</h2>
+      <label for="name">
+        Name:
+        <input id="name" name="user-name" type="text" placeholder="Praveen">
+      </label>
+      <button class="btn btn--hover">Hover Me</button><button class="btn btn--active">Click Me</button>
+    </section>
+
+    <section>
+      <h2>Pseudo Element</h2>
+
+      <div class="container">
+        <div class="box">
+          Take a close look 🧐
+        </div>
+        <div class="tip"></div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

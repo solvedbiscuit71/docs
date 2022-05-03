@@ -1,0 +1,33 @@
+.card {
+  width: 150px;
+  min-height: 150px;
+  padding: 10px;
+
+  border: 2px solid black;
+  background-color: white;
+}
+
+.card-1 {
+  /* position: relative; */
+  left: 25px;
+  top: 25px;
+}
+
+.card-2 {
+  background-color: hsl(208, 100%, 95%);
+  /* Try, uncomment the line below */
+  /* position: relative; */
+}
+
+.card-3 {
+  /*
+  If an element is positioned absolute!
+    1. padding of the parent container doesn't affect!
+    2. but, the margin of the positioned element affect with the parent container.
+    */
+  /* position: absolute; */
+
+  /* Try, comment the 2 lines below */
+  top: 5px;
+  right: 5px;
+}
