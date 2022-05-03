@@ -1,0 +1,32 @@
+.badge {
+  padding: 2.5px 5px;
+  background-color: var(--clr-orange-100);
+  border-radius: 5px;
+}
+
+.code {
+  font-family: 'JetBrains Mono', Agave, monospace;
+
+  white-space: pre-line;
+  background-color: var(--clr-grey-200);
+
+  padding: 0 1.5em 1.5em;
+  position: relative;
+}
+
+.code>span.comment {
+  color: var(--clr-grey-500);
+  font-style: italic;
+}
+
+.code::before {
+  content: "";
+
+  width: .5em;
+  height: 100%;
+  background-color: var(--clr-blue-200);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}

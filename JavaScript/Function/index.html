@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function</title>
+  <link rel="stylesheet" href="../Assets/global.css">
+  <link rel="stylesheet" href="../Assets/utility.css">
+
+  <script defer src="index.js"></script>
+
+  <style>
+    h3 {
+      text-decoration: solid underline black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Function</h1>
+    <p>
+      Function are reusable block of code. there are lot of different ways to defined a function
+      in javascript.
+    </p>
+    <ul role="list">
+      <li>Function Declaration</li>
+      <li>Function Expression</li>
+      <li>Immediately Invoked Function Expression</li>
+      <li>Arrow Function</li>
+    </ul>
+  </header>
+  <main>
+    <section>
+      <h3>Function Declaration</h3>
+      <div class="code">
+        function say(name) {
+        return `my name is ${name}`;
+        }
+        say('praveen') <span class="comment">// my name is praveen</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>Function Expression</h3>
+      <div class="code">
+        <span class="comment">/*
+          Note:
+          the function without a name is called Anonymous Functions.
+          */
+        </span>
+        var say = function (name) {
+        return `my name is ${name}`;
+        }
+        say() <span class="comment">// my name is undefined</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>Immediately Invoked Function Expression</h3>
+      <div class="code">
+        <span class="comment">/*
+          These function are immediately called on execution.
+          (function() {
+          body
+          })();
+          */
+        </span>
+        const num = -function () {
+        return 5;
+        }();
+
+        console.log(num) <span class="comment">// -5</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>Arrow Function</h3>
+      <div class="code">
+        const say = (name = 'solvedbiscuit71') => {
+        return `my name is ${name}`
+        }
+        say() <span class="comment">// my name is solvedbiscuit71</span>
+
+        <span class="comment">/*
+          You can also remove the () & {} if you have
+          - one argument
+          - only return statement.
+          */</span>
+
+        const say2 = name => `my name is ${name}`
+        say2('teju') <span class="comment">// my name is teju</span>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

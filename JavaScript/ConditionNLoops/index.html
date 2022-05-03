@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condition & Loop</title>
+  <link rel="stylesheet" href="../Assets/global.css">
+  <link rel="stylesheet" href="../Assets/utility.css">
+
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <main>
+    <section>
+      <h2>Truthy & Falsy</h2>
+      <p>
+        An expression can result in any of the following, there are classified as <b>Truthy & Falsy</b>.
+        if resultant is 'Truthy' it's consider to be true, else false
+
+      <ul style="display: flex; gap: 1em;">
+        <li>
+          Truthy
+          <ol role="list">
+            <li>true</li>
+            <li>number ( exclude 0 )</li>
+            <li>string ( exclude '' )</li>
+            <li>Array ( include [] )</li>
+            <li>Object ( include {} )</li>
+            <li>Function</li>
+          </ol>
+        </li>
+
+        <li>
+          Falsy
+          <ol role="list">
+            <li>false</li>
+            <li>undefined</li>
+            <li>null</li>
+            <li>0</li>
+            <li>'' empty string</li>
+          </ol>
+        </li>
+      </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>Logical operator & it's flow</h2>
+      <p>
+        There are three types of logical operator,
+      <ol role="list">
+        <li>!</li>
+        <li>&&</li>
+        <li>||</li>
+      </ol>
+      </p>
+
+      <div>
+        <h3>Fallback Case</h3>
+        <p>
+          Something we want to use an fallback value for an variable,<br>
+          Ex: we have a array in Database (but it may be null) in that case we need an fallback.
+
+        <div class="code">
+          <span class="comment">/*
+            Assume,
+            localStorage.getItem('array') as your database (it may return an array if present else null)
+            if we have array then take it else set to []
+            */
+          </span>
+          let array = localStorage.getItem('array') || []
+        </div>
+        </p>
+      </div>
+
+      <div>
+        <h3>Condition Case</h3>
+        <p>
+          Sometimes we want do something but if some condition is satisfied. <br>
+          Ex: you want to call a function if some value turned out to be true.
+
+        <div class="code">
+          <span class="comment">
+            /*
+            Assume,
+            isComplete -> variable for checking
+            callback() -> function need to call
+            if isComplete is 'Truthy' then, return callback()
+            */</span>
+          return isComplete && callback()
+        </div>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ternary Operator</h2>
+      <p>
+        This is a classic if-else substituent for return value statement. <br>
+        Ex: if we want to find whether an number is even or odd.
+
+      <div class="code">
+        let evenOrOdd = num % 2 === 0 ? 'even' : 'odd';
+      </div>
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>

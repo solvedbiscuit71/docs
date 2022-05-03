@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+
+  <link rel="stylesheet" href="../Assets/global.css">
+  <link rel="stylesheet" href="../Assets/utility.css">
+  <link rel="stylesheet" href="index.css">
+
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <main>
+    <section>
+      <h2>Primitives</h2>
+      <p>
+        There are 7 different primitive data types in javascript.
+      <ol role="list">
+        <li>bigint</li>
+        <li>boolean (true, false)</li>
+        <li>null</li>
+        <li>number (0, 1, -3.14, 1.2e-10)</li>
+        <li>string ('java', "script")</li>
+        <li>symbol</li>
+        <li>undefined</li>
+      </ol>
+      </p>
+    </section>
+    <section>
+      <h2>Variables</h2>
+      <p>
+        There are three way to declare a variable,
+      <ol role="list">
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+      </ol>
+      </p>
+
+      <section>
+        <h3>Different between var, let and const</h3>
+
+        <div class="flex">
+          <div>
+            <h4>var</h4>
+            <p>
+              In var,
+              we can declare and assign a variable and then reassign it later.
+
+              <br>
+            <ul role="list">
+              <li>function scope</li>
+              <li>allows redeclare</li>
+              <li>allows hoisting</li>
+            </ul>
+            </p>
+          </div>
+
+          <div>
+            <h4>let</h4>
+            <p>
+              In let,
+              we can declare and assign a variable and then reassign it later.
+
+              <br>
+            <ul role="list">
+              <li>block scope</li>
+              <li>doesn't allow redeclare</li>
+              <li>doesn't allows hoisting</li>
+            </ul>
+            </p>
+          </div>
+
+          <div>
+            <h4>const</h4>
+            <p>
+              In const,
+              we have to declare and assign a variable at the same line and it can't be reassigned.
+
+              <br>
+            <ul role="list">
+              <li>block scope</li>
+              <li>doesn't allow redeclare & reassign</li>
+              <li>doesn't allows hoisting</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <h2>Identifier</h2>
+      <p>
+        <b>Variables</b>
+        are container that store data in them. There are some rules in naming a variable in javascript,
+
+      <ul style="display: flex; flex-direction: column; gap: 1em;">
+        <li>
+          it should start with either,
+          <ol role="list">
+            <li>alphabet (A-Z a-z)</li>
+            <li>underscore (_)</li>
+            <li>dollar sign ($)</li>
+          </ol>
+        </li>
+
+        <li>
+          followed by,
+          <ol role="list">
+            <li>alphabet (A-Z a-z)</li>
+            <li>numbers (0-9)</li>
+            <li>underscore (_)</li>
+            <li>dollar sign ($)</li>
+          </ol>
+        </li>
+      </ul>
+      </p>
+
+      <div class="code">
+        var $Name123;
+        var _age_of_person;
+
+        var 0address;
+      </div>
+    </section>
+
+    <section>
+      <h2>camelCase</h2>
+      <p>
+        This is a naming convention used it javascript (not mandatory).
+      <ul role="list">
+        <li>The <b>first letter</b> of the <b>first word</b> should be lowercase</li>
+        <li>The following <b>first letter</b> of the <b>remaining word</b> should be uppercase</li>
+      </ul>
+
+      Ex:
+      <div class="code" style="margin-top: .5em;">
+        var userName;
+        var onClick;
+      </div>
+      </p>
+    </section>
+    </>
+  </main>
+</body>
+
+</html>

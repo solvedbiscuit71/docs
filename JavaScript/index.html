@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Tutorial</title>
+
+  <style>
+    h1 {
+      font-family: Arial;
+      font-size: 3.25rem;
+      font-weight: normal;
+
+      color: hsl(0, 82%, 65%);
+
+      text-align: center;
+      margin: 1em 0 0;
+    }
+
+    p {
+      font-family: "JetBrains Mono", Agave, monospace;
+      font-size: 1.25rem;
+      font-weight: normal;
+
+      color: hsl(0, 0, 92%);
+
+      text-align: center;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .flex>h2 {
+      font-family: Agave, monospace;
+      font-size: 1.875rem;
+      font-weight: normal;
+
+      color: hsl(0, 0, 92%);
+
+      text-align: center;
+      text-decoration: solid underline black;
+      margin: 1em 0 0;
+
+      position: relative;
+      right: .25em;
+    }
+
+    .flex ul {
+      list-style: none;
+
+      margin: 0;
+      padding: 0;
+
+      align-self: center;
+    }
+
+    .flex li {
+      font-family: Agave, monospace;
+      font-size: 1.25rem;
+      font-weight: normal;
+
+      color: hsl(0, 0, 92%);
+    }
+
+    .link {
+      color: black;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      cursor: pointer;
+    }
+
+    .link:visited {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JS Tutorial</h1>
+  <p>
+    { For web development }
+  </p>
+
+  <div class="flex">
+    <h2>routes</h2>
+    <ul>
+      <li><a class="link" href="/JavaScript/Variables/">Variables/</a></li>
+      <li><a class="link" href="/JavaScript/ConditionNLoops/">ConditionNLoops/</a></li>
+      <li><a class="link" href="/JavaScript/Function/">Function/</a></li>
+      <li><a class="link" href="/JavaScript/Object/">Object/</a></li>
+      <li><a class="link" href="/JavaScript/Dom/">Dom/</a></li>
+      <li><a class="link" href="/JavaScript/Forms/">Forms/</a></li>
+      <li><a class="link" href="/JavaScript/TodoList/">TodoList/</a></li>
+      <li><a class="link" href="/JavaScript/LocalStorage/">LocalStorage/</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

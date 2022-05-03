@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link rel="stylesheet" href="../Assets/global.css">
+  <link rel="stylesheet" href="../Assets/utility.css">
+  <link rel="stylesheet" href="index.css">
+
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Forms</h1>
+    <p>
+      Form are essential part for getting data from the user.
+    </p>
+
+    <section>
+      <h2>Thing to note in form</h2>
+      <ul role="list">
+        <li>
+          Every <b>input</b> element in a form has it's own state variable
+          <ul role="list">
+            <li>text input -> <b>value</b></li>
+            <li>checkbox & radio -> <b>checked</b></li>
+          </ul>
+        </li>
+        <li>We can set & get the state variable by <b>{element}.value</b></li>
+        <li>We can add <b>oninput</b> event listener to check for changes in state variable</li>
+        <li>Note: the event parameter from <b>oninput</b> will have the input element at <b>event.target</b></li>
+      </ul>
+    </section>
+  </header>
+
+  <main>
+    <fieldset>
+      <legend>Form</legend>
+
+      <form id="form">
+        <input type="email" name="email" id="email-input" placeholder="Enter your email..">
+        <button type="reset">reset</button>
+        <button type="submit">submit</button>
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Submit</legend>
+      <div>
+        Email: <span id="email-submit"></span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Logs</legend>
+      <div>
+        Email: <span id="email-log"></span>
+      </div>
+    </fieldset>
+  </main>
+</body>
+
+</html>

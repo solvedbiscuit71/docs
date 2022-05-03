@@ -1,0 +1,11 @@
+input[type='email'] {
+  padding: .25em .5em;
+  width: 15em;
+  min-height: 2.5em;
+}
+
+input[type='email'] ~ button {
+  min-height: 2.5em;
+  width: 4em;
+  text-transform: capitalize;
+}

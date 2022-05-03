@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.flex>* {
+  flex: 1;
+  padding: .5em 1em;
+
+  background-color: var(--clr-grey-200);
+}
+
+.flex h4 {
+  text-align: center;
+  text-decoration: solid underline black;
+}
+
+@media (max-width: 500px) {
+  .flex {
+    flex-direction: column;
+  }
+}

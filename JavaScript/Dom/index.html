@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+  <link rel="stylesheet" href="../Assets/global.css">
+  <link rel="stylesheet" href="../Assets/utility.css">
+
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>DOM</h1>
+    <p>
+      The Document Object Model (DOM) is the data representation of the objects
+      that comprise the structure and content of a document on the web.
+    </p>
+
+    <section>
+      <h3 style="margin-bottom: 0;">Process</h3>
+      <ol role="list" style="margin-top: 10px;">
+        <li>state variables are defined for state of the ui.</li>
+        <li>use a setState() function to update the state variable & ui</li>
+        <ul role="list">
+          <li>get the ui element</li>
+          <li>update the state variable</li>
+          <li>update the ui with the new state variable</li>
+        </ul>
+      </ol>
+    </section>
+  </header>
+
+  <main>
+    <div>
+      Click the Button =>
+      <button id="button">Click Me</button>
+
+      <br style="margin-bottom: 1em;">
+      you have clicked
+      <span class="badge" id="output">0</span>
+      times
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+  <link rel="stylesheet" href="../Assets/global.css">
+  <link rel="stylesheet" href="../Assets/utility.css">
+
+  <script defer src="index.js"></script>
+
+  <style>
+    h2 {
+      text-decoration: solid underline black;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex>* {
+      flex: 1;
+    }
+
+    .flex h3 {
+      text-decoration: solid underline black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Object</h1>
+    <p>
+      Every time (except primitive data types) are considered an object in javascript. any object are considered Truthy.
+    <ol role="list" style="margin-top: 0;">
+      <li>Array []</li>
+      <li>Object {}</li>
+      <li>Function (){}</li>
+      <li>Instance of a class</li>
+    </ol>
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Array:</h2>
+      <p>
+        An array is a collection of heterogeneous datatypes.
+
+      <div class="flex">
+        <div>
+          <h3>Basics</h3>
+          <ul>
+            <li>arr[i] -> indexing starts from 0</li>
+            <li>arr.push(x) -> add x to end of array</li>
+            <li>arr.pop() -> remove last item</li>
+            <li>arr.unshift() -> add x to start of array</li>
+            <li>arr.shift() -> remove first item</li>
+            <li>arr.slice(start,end) -> slice the array (negative indexing allowed)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Advanced</h3>
+          <ul>
+            <li>arr.forEach() -> to iterator every item</li>
+            <li>arr.find() -> to find the first occurance</li>
+            <li>arr.findIndex() -> to find the index of first occurance</li>
+            <li>arr.filter() -> to filter the array based on condition</li>
+            <li>arr.map() -> to create another array based on current array</li>
+            <li>arr.reduce() -> to compute some value based on items in array</li>
+          </ul>
+        </div>
+      </div>
+      </p>
+    </section>
+
+    <section>
+      <h2>Object:</h2>
+      <p>
+        an object is a key-value pair (like, dictionary in python). in fact an array is an instance of <b>Object.</b>
+
+      <h3>Methods</h3>
+      <ul role="list">
+        <li>obj.keys() -> returns an iterator of key</li>
+        <li>obj.values() -> returns an iterator of value</li>
+        <li>obj.entries() -> returns an iterator of [key,value] pair</li>
+      </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>Object Destructuring:</h2>
+      <p>
+        Object Destruturing is an method to destructure the object into individual pieces.
+
+        <br>
+        Here, we use the <b>...</b> seperate operator with brackets to destructure it.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
