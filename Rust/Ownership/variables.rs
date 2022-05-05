@@ -17,13 +17,12 @@ fn main() {
 
   println!("{}", heap_s1);
 
-  let heap_s2 = heap_s1;
+  let heap_s2 = heap_s1; // This is called `move`
 
   // Here, rust consider `heap_s1` is not valid (to avoid double free error) and heap_s1 will cause error.
   // println!("{}", heap_s1);
 
-  let heap_s3 = heap_s2.clone();
-  // This is a deep copy.
+  let heap_s3 = heap_s2.clone(); // This is called `copy`
 
   println!("{}, {}", heap_s2, heap_s3);
  
