@@ -34,4 +34,17 @@ fn main() {
     Some(value) => println!("Value poped is {}", value),
     None => println!("Vector is empty")
   }
+
+  /*
+  NOTE:
+  - it's not just limited to enums
+  - match expression are evaluation in order.
+  */
+
+  let x: u8 = 5;
+  match x {
+    0 => println!("it's zero"),
+    _ => println!("it's not zero")
+  }
+  // Here, _ means all other cases of u8.
 }
