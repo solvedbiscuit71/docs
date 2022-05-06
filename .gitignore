@@ -1,1 +1,7 @@
+# ignore annoying .DS_Store
 .DS_Store
+
+# Rust
+Rust/Cargo.lock
+Rust/src/main.rs
+Rust/target/

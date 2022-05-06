@@ -13,5 +13,7 @@ fn main() {
   let s1 = String::from("Hello World");
   let word = first_word(&s1);
 
+  // s1.clear(); // This will cause error.
+
   println!("First word is '{}'", word);
 }
