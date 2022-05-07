@@ -24,7 +24,9 @@ fn largest_item(v: &Vec<u32>) -> &u32 {
   Here, we define a generic <T> which an PartialOrd Trait bounded to it.
   NOTE: generics don't create types it defines relationship between types.
 */
-fn largest_item_generics<T: PartialOrd>(v: &Vec<T>) -> &T {
+
+// NOTE: here, instead of Vec<T> you can use [T]
+fn largest_item_generics<T: PartialOrd>(v: &[T]) -> &T {
   let mut max = &v[0];
   for item in v {
     if max < item {
