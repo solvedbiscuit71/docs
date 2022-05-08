@@ -1,15 +1,20 @@
 fn main() {
   /*
-    Primitive data types:
-    1. i8,i16,..,i128,isize (signed)
-    2. u8,u16,..,u128,usize (unsigned)
-    3. f32,f64 (floats)
-    4. char
+    let {variable_name}: {type} = {value};
+
+    Here,
+    - variable_name usually snake_case!
+    - type (can be implicity)
+    - value (value relavent to that type)
+
+    Note:
+    - by default, let defines a immutable variable.
+    - to make a mutable variable, add 'mut' keyword.
   */
   let _x: i32 = -45;
-  let _y: f64 = 0.05;
+  let mut _y: f64 = 0.05;
 
-  let _c: char = 'c';
+  let _c = 'c'; // automatically, inferred as 'char'
 
   /*
     Compound types:
@@ -17,12 +22,12 @@ fn main() {
     2. array [homogeneous] -> accessing by "array[0]"
   */
 
-  let t: (u32, f32, char) = (25, 25.05, 't');
-  let a: [i32; 5] = [3,4,6,28,98];
+  let tuple: (u32, f32, char) = (25, 25.05, 't');
+  let array: [i32; 5] = [3,4,6,28,98];
 
-  let a1 = [0; 5];
+  let array_generated = [0; 5];
 
-  println!("Tuples last element was {}", t.2);
-  println!("Array second element was {}", a[1]);
-  println!("{:?}",a1)
+  // Note: {} -> Display trait & {:?} -> Debug trait
+  println!("Tuple: {:?}, Array: {:?}", tuple, array);
+  println!("Array (generated): {:?}",array_generated);
 }

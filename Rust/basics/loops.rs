@@ -1,43 +1,36 @@
-/*
-  There are 3 types of loops in Rust.
-  1. loop -> forever; manual stopping required
-  2. while -> conditional;
-  3. for -> conditional;
-*/
-
 fn main() {
+  let mut sum_till_5 = 0;
+
+  // Here, 0..=5 creates an iterator starts from 0 to 5 (inclusive)
+  for num in 0..=5 {
+    sum_till_5 += num;
+  }
+  println!("Sum of numbers from 0..5 is {}", sum_till_5);
+
   let mut count = 3;
+  while count > 0 {
+    print!("{}... ", count);
+    count -= 1;
+  }
+  println!("Start!");
 
-  println!("Counting down...");
-  let status = loop {
-    println!("{}", count);
+  /*
+  loop is an infinite loop which requires manual breaking by, 'break' statement;
+  */
 
-    count = count - 1;
-    if count == 0 {
-      println!("Launch!!!");
-      break 404; // return value from an loop.
+  let mut count = 0;
+  let return_value = loop {
+    if count % 2 == 0 {
+      print!("{} ", count);
+
+      count += 1;
+      continue;
+    } else if count > 10 {
+      break count;
     }
+
+    count += 1;
   };
 
-  println!("Status Code: {}", status);
-
-  // while loop (conditional looping)
-
-  count = 3;
-  println!("Relaunch.. Counting down...");
-
-  while count > 0 {
-    println!("{}", count);
-    count = count - 1;
-  }
-  println!("Launch!!!");
-
-
-  // for loop (iterating over array)
-
-  let secert_code = [4,2,6,8,0];
-  for digit in secert_code {
-    print!("{}.", digit);
-  }
-  println!("")
+  println!("and Return Value: {}", return_value);
 }

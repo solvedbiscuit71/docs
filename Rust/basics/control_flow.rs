@@ -1,17 +1,18 @@
+use std::io;
+
 fn main() {
-  let number: i32 = 5;
+  let mut num = String::new();
+  io::stdin()
+    .read_line(&mut num)
+    .expect("input failed");
 
-  if number > 0 {
-    println!("Number is greater");
-  } else if number < 0 {
-    println!("Number is lesser");
+  let num: i32 = num.trim().parse().expect("please enter a valid number."); 
+  // Here, num is an number from the user.
+
+  const SECRET: i32 = 13;
+  if num >= SECRET {
+    println!("number is greater or equal to SECRET");
   } else {
-    println!("Number is 0");
+    println!("number is lesser than SECRET");
   }
-
-  // Here, if number { will cause type error.
-  let result: bool = if number != 0 { true } else { false };
-
-  // since, if is an expression we can use in let.
-  println!("{}",result);
 }
