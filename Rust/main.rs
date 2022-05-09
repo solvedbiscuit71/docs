@@ -1,13 +1,27 @@
 /*
-	Routes:
-		basics/
-		ownership/
-		structs/
-		enums/
+	Rust Tutorial
+		by Praveen Perumal
 
-	NOTE: here, folder will be lowercase & file will be snake_case.
+	Routes:
+		Basic/
+		Ownership/
+		Enum/
+		Struct/
+		Generics/
+		Traits/
+		Smart_Pointer/
 */
 
 fn main() {
-    println!("Welcome to Rust Tutorial");
+	println!("Rust Tutorial");
+	println!("  by Praveen Perumal\n");
+
+	println!("Routes:");
+	println!("  Basic/");
+	println!("  Ownership/");
+	println!("  Enum/");
+	println!("  Struct/");
+	println!("  Generics/");
+	println!("  Traits/");
+	println!("  Smart_Pointer/");
 }
