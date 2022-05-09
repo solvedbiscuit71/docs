@@ -17,15 +17,6 @@
 */
 
 fn largest_string_of<'a>(s1: &'a str, s2: &'a str) -> &'a str {
-  /*
-    Here, the rust compiler doesn't know whether s1 & s2 will be return.
-
-    But, by elision rules,
-    s1 & s2 will get two different lifetimes and return value's lifetime is unknown
-    because, it can either be s1 or s2 ??
-
-    So, we can to relate that s1 & s2 will have same life time and so does return reference.
-  */
   if s1.len() > s2.len() {
     s1
   } else {
