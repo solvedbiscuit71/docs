@@ -9,7 +9,7 @@ __NOTE__
 ## How to use ?
 
 I created this repository for personal reference & uses. if you want to use it then fork this repository and 
-clone it into your local machine. after cloning try [serve](https://www.npmjs.com/package/serve) or your [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VSCode to serve the Docs/ directory.
+clone it into your local machine. after cloning try [lite-server](https://www.npmjs.com/package/lite-server) Or [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for VSCode to serve the `Docs/` directory.
 
 # About me
 
