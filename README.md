@@ -13,7 +13,7 @@ clone it into your local machine. after cloning try [lite-server](https://www.np
 
 # About me
 
-Hi, I am Praveen Perumal (@solvedbiscuit71) a self-taught computer enthusiast. if you are interest in my work check me on,
+Hi, I am Praveen Perumal (@solvedbiscuit71). if you are interest in my work check me on,
 
 - Github - [@solvedbiscuit71](https://github.com/solvedbiscuit71)
 - Frontend Mentor - [@solvedbiscuit71](https://www.frontendmentor.io/profile/solvedbiscuit71)
