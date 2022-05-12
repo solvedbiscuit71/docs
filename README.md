@@ -1,6 +1,6 @@
 # Docs
 
-This is a personal (private) repository for storing & maintaining
+This is a personal repository for storing & maintaining
 my personal documentation and tutorials.
 
 __NOTE__  
