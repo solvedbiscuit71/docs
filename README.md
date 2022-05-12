@@ -1,7 +1,6 @@
 # Docs
 
 This is a personal repository for storing & maintaining my personal documentation and tutorials.  
-Preview: [/docs](https://solvedbiscuit71.github.io/docs/)
 
 __NOTE__  
 - The name of folders should be `capitalize`
