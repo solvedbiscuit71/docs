@@ -4,12 +4,16 @@ This is a personal repository for storing & maintaining my personal documentatio
 
 __NOTE__  
 - The name of folders should be `capitalize`
-- The name of file should be `lowercase`
+- The name of file should be `snake_case` or `kebab-case`
 
-# Author
+## How to use ?
 
-Hi, i am Praveen Perumal (@solvedbiscuit71) a self-taught programmer & developer.
+I created this repository for personal reference & uses. if you want to use it then fork this repository and 
+clone it into your local machine. after cloning try [serve](https://www.npmjs.com/package/serve) or your [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VSCode to serve the Docs/ directory.
 
-Check me on, 
+# About me
+
+Hi, I am Praveen Perumal (@solvedbiscuit71) a self-taught computer enthusiast. if you are interest in my work check me on,
+
 - Github - [@solvedbiscuit71](https://github.com/solvedbiscuit71)
 - Frontend Mentor - [@solvedbiscuit71](https://www.frontendmentor.io/profile/solvedbiscuit71)
