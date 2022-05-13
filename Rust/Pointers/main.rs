@@ -2,8 +2,10 @@ fn main() {
     // In, C++ we have RAII but in Rust we have OBRM (Ownership based resource management)
 
     /*
-       - Every value has only owner at a time.
-       - Whenever, the owner goes out of scope it's value is *drop*
+        Ownership Rules:
+        1. Each value in rust has a variable that called owner
+        2. There can be only one owner at a time
+        3. When owner goes out of scope, the value will be dropped
     */
 
     let _str = String::from("Pointers");

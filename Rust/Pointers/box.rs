@@ -1,10 +1,35 @@
+/*
+   Single Linked List:
+
+   In C++
+       struct Node {
+           int data,
+           Node* next
+       };
+*/
+
+#[derive(Debug)]
+struct Node<T> {
+    data: T,
+    next: Option<Box<Node<T>>>,
+}
+
+impl<T> Node<T> {
+    fn set_next(&mut self, next: Node<T>) {
+        self.next = Some(Box::new(next));
+    }
+}
+
 fn main() {
-    // Box::new() -> similar to make_unique() in C++ [it creates an unique ptr]
-    let num: Box<i32> = Box::new(5);
-    let mut num2 = num; // -> value moved to num2
+    let mut head = Node {
+        data: 1,
+        next: None,
+    };
 
-    println!("{}", num2);
-    num2 = Box::new(10);
+    head.set_next(Node {
+        data: 2,
+        next: None,
+    });
 
-    println!("After reassignment: {}", num2);
+    println!("{:?}", head);
 }
