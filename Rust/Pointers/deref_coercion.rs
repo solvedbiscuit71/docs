@@ -25,6 +25,11 @@ fn greet(name: &str) {
     - Compiler automatically dereference to the value into desired value for function & method.
 
     NOTE: Deref Trait should be implemented!
+
+    Rust will do deref coercion when,
+    - From &T to &U when T: Deref<Target=U>
+    - From &mut T to &mut U when T: DerefMut<Target=U>
+    - From &mut T to &U when T: Deref<Target=U>
  */
 
 fn main() {
@@ -35,5 +40,7 @@ fn main() {
         Here, we are passing &MyBox<String>
         which is deref to
         -> &String (because we implemented Deref) -> &str (std already implemented &String -> &str)
+
+        Here, &MyBox<String> -> &String because MyBox<String>: Deref<Target=String>
      */
 }
