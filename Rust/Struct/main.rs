@@ -1,30 +1,22 @@
-/*
-  We use enum for defining types with different variants.
-  But, what if we want to store different types into one (grouping).
-*/
+#![allow(dead_code)]
 
-// Here, derive(Debug) is used to format the enum in {:?}
 #[derive(Debug)]
-enum Quarant {
-  First,
-  Second,
-  Third,
-  Fourth,
-  Origin
-}
+struct Unit;
+
+struct Pair(i32, i32);
 
 struct Point {
-  x: i32,
-  y: i32,
-  quarant: Quarant
+    x: i32,
+    y: i32,
 }
 
 fn main() {
-  let p1 = Point {
-    x: 32,
-    y: -15,
-    quarant: Quarant::Fourth
-  };
+    let pair = Pair(35, 55);
+    println!("{}, {}", pair.0, pair.1);
 
-  println!("P1 ({}, {}) which is in {:?}", p1.x, p1.y, p1.quarant);
+    let point = Point { x: 5, y: -10 };
+    println!("({}, {})", point.x, point.y);
+
+    let some = Unit;
+    println!("{:?}", some);
 }
