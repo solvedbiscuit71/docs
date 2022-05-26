@@ -1,2 +1,6 @@
 # ignore annoying .DS_Store
 .DS_Store
+
+# ignore rust target & Cargo.lock
+target/
+Cargo.lock
