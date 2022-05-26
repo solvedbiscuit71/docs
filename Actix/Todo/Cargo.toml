@@ -8,5 +8,4 @@ edition = "2021"
 [dependencies]
 actix-web = "4"
 serde = { version = "1.0.137", features = ["derive"] }
-dotenv = "0.15.0"
-config = "0.13.1"
+dotenv_codegen = "0.15.0"
