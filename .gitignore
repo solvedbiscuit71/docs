@@ -4,3 +4,7 @@
 # ignore rust target & Cargo.lock
 target/
 Cargo.lock
+
+# ignore .env file
+migrations/
+.env
