@@ -1,8 +1,9 @@
+pub mod router;
+
 use rocket::{
     http::Status,
     request::{FromRequest, Outcome, Request},
 };
-
 pub struct ApiKey(pub String);
 
 #[derive(Debug)]
