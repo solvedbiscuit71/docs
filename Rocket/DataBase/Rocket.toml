@@ -1,0 +1,5 @@
+[default]
+log_level = "off"
+
+[default.databases.rocket_example]
+url = "postgres://rocket:ROCKET@localhost/rocket_example"
