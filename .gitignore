@@ -6,5 +6,4 @@ target/
 Cargo.lock
 
 # ignore .env file
-migrations/
 .env
