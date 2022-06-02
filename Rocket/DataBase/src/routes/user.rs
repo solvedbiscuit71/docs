@@ -29,6 +29,34 @@ async fn get_user_by_id(mut db: Connection<Pg>, id: i32) -> Option<UserType> {
         .ok()
 }
 
+#[get("/<id>/product")]
+async fn get_user_products(mut db: Connection<Pg>, id: i32) -> Value {
+    let res = sqlx::query!(
+        "SELECT p.id, p.name, p.price FROM users u
+    INNER JOIN products p ON p.user_id = u.id
+    WHERE u.id = $1",
+        id
+    )
+    .fetch_all(&mut *db)
+    .await
+    .ok()
+    .unwrap_or(vec![]);
+
+    let mut recs = vec![];
+    res.iter().for_each(|rec| {
+        recs.push(json!({
+            "id": rec.id,
+            "name": rec.name.clone().unwrap(),
+            "price": rec.price,
+        }))
+    });
+
+    json!({
+        "code": 200,
+        "products": recs
+    })
+}
+
 #[put("/<id>", data = "<user>")]
 async fn update_user<'r>(mut db: Connection<Pg>, id: i32, user: UserType) -> Value {
     let res = sqlx::query!(
@@ -94,7 +122,13 @@ pub fn stage() -> AdHoc {
     AdHoc::on_ignite("user", |rocket| async {
         rocket.mount(
             "/user",
-            routes![create_user, get_user_by_id, update_user, delete_user_by_id],
+            routes![
+                create_user,
+                get_user_by_id,
+                get_user_products,
+                update_user,
+                delete_user_by_id
+            ],
         )
     })
 }
