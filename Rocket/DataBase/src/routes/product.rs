@@ -86,11 +86,83 @@ async fn get_product_by_id(mut db: Connection<Pg>, id: i32) -> Value {
     }
 }
 
+#[put("/<id>", data = "<product>")]
+async fn update_product(mut db: Connection<Pg>, id: i32, product: ProductType) -> Value {
+    let res = sqlx::query!(
+        "UPDATE products SET name = $1, price = $2 WHERE id = $3 and user_id = $4",
+        product.name,
+        product.price,
+        id,
+        product.user_id
+    )
+    .execute(&mut *db)
+    .await
+    .ok();
+
+    match res {
+        Some(res) => {
+            if res.rows_affected() == 0 {
+                json!({
+                    "code": 404,
+                    "message": "invalid identifier"
+                })
+            } else {
+                json!({
+                    "code": 200,
+                    "message": "successfully updated product"
+                })
+            }
+        }
+        None => json!({
+            "code": 500,
+            "message": "updation failed"
+        }),
+    }
+}
+
+#[delete("/<id>?<user_id>")]
+async fn delete_product(mut db: Connection<Pg>, id: i32, user_id: i32) -> Value {
+    let res = sqlx::query!(
+        "DELETE FROM products WHERE id = $1 and user_id = $2",
+        id,
+        user_id
+    )
+    .execute(&mut *db)
+    .await
+    .ok();
+
+    match res {
+        Some(res) => {
+            if res.rows_affected() == 0 {
+                json!({
+                    "code": 404,
+                    "message": "invalid identifier"
+                })
+            } else {
+                json!({
+                    "code": 200,
+                    "message": "successfully deleted product"
+                })
+            }
+        }
+        None => json!({
+            "code": 500,
+            "message": "deletion failed"
+        }),
+    }
+}
+
 pub fn stage() -> AdHoc {
     AdHoc::on_ignite("product", |rocket| async {
         rocket.mount(
             "/product",
-            routes![create_product, get_products, get_product_by_id],
+            routes![
+                create_product,
+                get_products,
+                get_product_by_id,
+                update_product,
+                delete_product
+            ],
         )
     })
 }

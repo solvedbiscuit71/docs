@@ -91,7 +91,7 @@ async fn update_user<'r>(mut db: Connection<Pg>, id: i32, user: UserType) -> Val
 }
 
 #[delete("/<id>")]
-async fn delete_user_by_id(mut db: Connection<Pg>, id: i32) -> Value {
+async fn delete_user(mut db: Connection<Pg>, id: i32) -> Value {
     let res = sqlx::query!("DELETE FROM users WHERE id = $1", id)
         .execute(&mut *db)
         .await
@@ -127,7 +127,7 @@ pub fn stage() -> AdHoc {
                 get_user_by_id,
                 get_user_products,
                 update_user,
-                delete_user_by_id
+                delete_user
             ],
         )
     })
