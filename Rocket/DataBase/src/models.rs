@@ -1,4 +1,5 @@
 use rocket::serde::{json::Json, Deserialize, Serialize};
+use rocket_db_pools::{sqlx, Database};
 
 #[derive(Serialize, Deserialize, Clone)]
 #[serde(crate = "rocket::serde")]
@@ -22,3 +23,7 @@ impl User {
 }
 
 pub type UserType = Json<User>;
+
+#[derive(Database)]
+#[database("rocket_example")]
+pub struct Pg(sqlx::PgPool);
