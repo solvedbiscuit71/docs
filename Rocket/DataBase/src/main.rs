@@ -12,4 +12,5 @@ fn rocket() -> _ {
     rocket::build()
         .attach(Pg::init())
         .attach(routes::user::stage())
+        .attach(routes::product::stage())
 }
