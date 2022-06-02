@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate rocket;
 
+mod cors;
 mod models;
 mod routes;
 
@@ -20,6 +21,7 @@ fn catch_404() -> Value {
 fn rocket() -> _ {
     rocket::build()
         .attach(Pg::init())
+        .attach(cors::cors())
         .attach(routes::user::stage())
         .attach(routes::product::stage())
         .register("/", catchers![catch_404])
