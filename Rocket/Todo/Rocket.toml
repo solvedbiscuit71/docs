@@ -1,0 +1,5 @@
+[default]
+log_level = "off"
+
+[default.databases.todo_service]
+url = "postgres://rocket:ROCKET@localhost/todo_service"
