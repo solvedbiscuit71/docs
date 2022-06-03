@@ -1,28 +1,12 @@
-use rocket::serde::{
-    json::{serde_json::json, Json, Value},
-    Deserialize, Serialize,
+use crate::models::{Group, Pg};
+use rocket::{
+    fairing::AdHoc,
+    routes,
+    serde::json::{json, Json, Value},
 };
-use rocket_db_pools::{Connection, Database};
+use rocket_db_pools::Connection;
 
-#[macro_use]
-extern crate rocket;
-
-/* ---- structs ---- */
-
-#[derive(Database)]
-#[database("todo_service")]
-struct Pg(sqlx::PgPool);
-
-#[allow(dead_code)]
-#[derive(Serialize, Deserialize, Clone)]
-#[serde(crate = "rocket::serde")]
-struct Group {
-    id: Option<String>,
-    name: Option<String>,
-    desc: Option<String>,
-}
-
-/* ---- functions ---- */
+use rocket::{delete, get, post};
 
 #[post("/", data = "<group>")]
 async fn create_group(mut db: Connection<Pg>, group: Json<Group>) -> Value {
@@ -123,12 +107,11 @@ async fn delete_group_by_id(mut db: Connection<Pg>, id: &str) -> Value {
     }
 }
 
-/* ---- launch 🚀 ---- */
-
-#[launch]
-fn rocket() -> _ {
-    rocket::build().attach(Pg::init()).mount(
-        "/group",
-        routes![create_group, read_groups, delete_group_by_id],
-    )
+pub fn stage() -> AdHoc {
+    AdHoc::on_ignite("group", |rocket| async {
+        rocket.mount(
+            "/group",
+            routes![create_group, read_groups, delete_group_by_id],
+        )
+    })
 }
