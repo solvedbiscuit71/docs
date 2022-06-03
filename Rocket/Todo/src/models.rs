@@ -13,3 +13,13 @@ pub struct Group {
     pub name: Option<String>,
     pub desc: Option<String>,
 }
+
+#[allow(dead_code)]
+#[derive(Serialize, Deserialize, Clone)]
+#[serde(crate = "rocket::serde")]
+pub struct Todo {
+    pub id: Option<String>,
+    pub body: Option<String>,
+    pub is_checked: Option<bool>,
+    pub group_id: Option<String>,
+}

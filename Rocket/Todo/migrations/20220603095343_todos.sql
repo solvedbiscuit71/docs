@@ -1,0 +1,6 @@
+CREATE TABLE todos (
+  id VARCHAR PRIMARY KEY,
+  body TEXT UNIQUE NOT NULL,
+  "is_checked" BOOLEAN NOT NULL,
+  group_id VARCHAR NOT NULL REFERENCES groups(id)
+);

@@ -17,12 +17,15 @@ async fn create_group(mut db: Connection<Pg>, group: Json<Group>) -> Value {
         });
     }
     let id = uuid::Uuid::new_v4().to_string();
-    let name = group.name.clone().unwrap();
-    let desc = group.desc.clone().unwrap();
 
-    let res = sqlx::query!("INSERT INTO groups VALUES ($1, $2, $3)", id, name, desc)
-        .execute(&mut *db)
-        .await;
+    let res = sqlx::query!(
+        "INSERT INTO groups VALUES ($1, $2, $3)",
+        id,
+        group.name.clone(),
+        group.desc.clone()
+    )
+    .execute(&mut *db)
+    .await;
 
     match res {
         Ok(res) => {
@@ -65,7 +68,7 @@ async fn read_groups(mut db: Connection<Pg>) -> Value {
     })
 }
 
-fn check_for_uuid(id: &str) -> bool {
+pub fn check_for_uuid(id: &str) -> bool {
     if id.len() != 36 {
         return false;
     }

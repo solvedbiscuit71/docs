@@ -5,12 +5,15 @@ extern crate rocket;
 
 /* ---- crates ---- */
 
-use todo::models::Pg;
-use todo::router::group;
+use todo_service::models::Pg;
+use todo_service::router::{group, todo};
 
 /* ---- launch 🚀 ---- */
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().attach(Pg::init()).attach(group::stage())
+    rocket::build()
+        .attach(Pg::init())
+        .attach(group::stage())
+        .attach(todo::stage())
 }
